@@ -10,7 +10,19 @@
     }
 </style>
 <h1>Contador</h1>
-<p>0</p>
+<p id="num">0</p>
 <p>
-    <button>Aumentar</button>
+    <button onclick="aumenta()">Aumentar</button>
 </p>
+<script>
+    var numero = 0
+    
+    function aumenta() {
+        numero = numero + 1
+        mostrar()
+    }
+
+    function mostrar() {
+        document.getElementById("num").innerText = numero
+    }
+</script>
